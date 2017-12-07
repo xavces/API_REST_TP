@@ -1,11 +1,11 @@
 import express from 'express';
-import database from 'app/core/bdd/bdd.js';
+import database from 'app/core/bdd/bdd';
 
 const myRoute = express.Router();
 
 let orderLineModel;
-database.modelInitOrderLine((orderLineModel2) => {
-    orderLineModel = orderLineModel2;
+database.modelInitOrderLine((callback) => {
+    orderLineModel = callback;
 });
 
 let orderModel;
@@ -28,7 +28,6 @@ myRoute.route('/orderline').get((req, res) => {
 // Route pour – http://localhost:3000/order/{order_id}/line
 myRoute.route('/order/:order_id/line')
 // Ajouter une ligne de commande (renvoi la ligne créée en cas de succès)
-
     .post((req, res) => {
         const newOrderLine = new orderLineModel({
         });
@@ -53,13 +52,13 @@ myRoute.route('/order/:order_id/line/:line_id')
 // Supprimer une ligne de commande
     .delete((req, res) => {
         orderModel.find({ _id: req.params.order_id })
-            .lean().exec((error, order) => {
+            .lean().exec((error) => {
                 if (error) {
                     res.json({ error });
                 } else {
-                    orderLineModel.remove({ _id: req.params.line_id }, (error) => {
-                        if (error) {
-                            res.json({ error });
+                    orderLineModel.remove({ _id: req.params.line_id }, (error2) => {
+                        if (error2) {
+                            res.json({ Error: error2 });
                         } else {
                             res.json({ message: `Suppression de la ligne de commande n°${req.params.line_id}`, etat: 'Commandes supprimé avec succés !' });
                         }

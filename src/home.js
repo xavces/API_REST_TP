@@ -1,10 +1,9 @@
-import webserver from 'app/core/webserver/server.js';
-import database from 'app/core/bdd/bdd.js';
-import productRoute from 'app/core/route/product.js';
-import orderLine from 'app/core/route/orderLine.js';
-import metier from 'app/core/route/metier.js';
-import order from 'app/core/route/order.js';
-import express from 'express';
+import webserver from 'app/core/webserver/server';
+import database from 'app/core/bdd/bdd';
+import productRoute from 'app/core/route/product';
+import orderLine from 'app/core/route/orderLine';
+import metier from 'app/core/route/metier';
+import order from 'app/core/route/order';
 
 
 console.log(webserver);

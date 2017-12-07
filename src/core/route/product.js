@@ -1,11 +1,11 @@
 import express from 'express';
-import database from 'app/core/bdd/bdd.js';
+import database from 'app/core/bdd/bdd';
 
 const myRoute = express.Router();
 
 let productModel;
-database.modelInitProduct((productModel2) => {
-    productModel = productModel2;
+database.modelInitProduct((callback) => {
+    productModel = callback;
 });
 
 // Route de base pour l'affichage de la page d'accueil

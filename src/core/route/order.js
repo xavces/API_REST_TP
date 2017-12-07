@@ -1,12 +1,12 @@
 import express from 'express';
-import database from 'app/core/bdd/bdd.js';
+import database from 'app/core/bdd/bdd';
 
 
 const myRoute = express.Router();
 
 let orderModel;
-database.modelInitOrder((orderModel2) => {
-    orderModel = orderModel2;
+database.modelInitOrder((callback) => {
+    orderModel = callback;
 });
 
 // Route pour – http://localhost:3000/order

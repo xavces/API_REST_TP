@@ -34,7 +34,7 @@ class Webserver {
     }
     close(callback) {
         if (this.server === null) {
-            callback(new error('Web Server is not running'));
+            callback(new err('Web Server is not running'));
         } else {
             this.server.close((error) => {
                 if (typeof callback === 'function') {
