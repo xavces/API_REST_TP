@@ -7,6 +7,9 @@ import order from 'app/core/route/order';
 
 
 console.log(webserver);
+/**
+ * Appelle la fonction start du webserver avec comme argument le port 3000
+ */
 webserver.start(3000, (error, express) => {
     if (!error) {
         console.log('Webserver started');

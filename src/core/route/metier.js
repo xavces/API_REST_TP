@@ -2,6 +2,8 @@ import express from 'express';
 
 const myRoute = express.Router();
 
+
+
 // Route pour - http://localhost:3000/dashboard/orders
 myRoute.route('/dashboard/orders')
     .get((req, res) => {
