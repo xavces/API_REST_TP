@@ -72,7 +72,8 @@ class Database {
         });
     }
     /**
-     * Initialise le modèle order de la base de donnée mongoose pour l'envoie des requête sous la bonne forme
+     * Initialise le modèle order de la base de donnée mongoose 
+     * pour l'envoie des requête sous la bonne forme
      * @method Database#modelInitOrder
      * @param {function} callback - Renvoi le modèle
      */
@@ -81,7 +82,8 @@ class Database {
         callback(this.orderModel);
     }
     /**
-     * Initialise le modèle product de la base de donnée mongoose pour l'envoie des requête sous la bonne forme
+     * Initialise le modèle product de la base de donnée mongoose 
+     * pour l'envoie des requête sous la bonne forme
      * @method Database#modelInitProduct
      * @param {function} callback - Renvoi le modèle
      */
