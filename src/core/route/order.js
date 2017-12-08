@@ -22,8 +22,6 @@ database.modelInitOrder((callback) => {
 });
 
 
-
-
 myRouteOrder.route('/order')
 /**
  * Route pour lister les commandes (avec leurs lignes de commande) - GET http://localhost:3000/order

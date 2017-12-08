@@ -30,7 +30,6 @@ database.modelInitOrder((orderModel2) => {
 });
 
 
-
 myRouteOrderLine.route('/orderline')
 /**
  * Route pour lister les lignes de commandes - GET http://localhost:3000/orderline
@@ -41,15 +40,15 @@ myRouteOrderLine.route('/orderline')
  * @param {json} req - Express requête
  * @param {json} res - Express response.
  */
-.get((req, res) => {
-    orderLineModel.find((error, ordersLine) => {
-        if (error) {
-            res.json({ error });
-        } else {
-            res.json({ message: 'Liste de toutes les lignes de commandes : ', ordersLine });
-        }
+    .get((req, res) => {
+        orderLineModel.find((error, ordersLine) => {
+            if (error) {
+                res.json({ error });
+            } else {
+                res.json({ message: 'Liste de toutes les lignes de commandes : ', ordersLine });
+            }
+        });
     });
-});
 
 myRouteOrderLine.route('/order/:order_id/line')
 /**

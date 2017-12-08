@@ -123,7 +123,7 @@ myRouteProduct.route('/product/:id')
             }
         });
     })
-        /**
+/**
  * Route pour modifier un produit (renvoi le produit créé en cas de succès) - PUT http://localhost:3000/product/{id}
  * @name put/product/:id
  * @function

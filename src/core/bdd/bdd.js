@@ -90,7 +90,8 @@ class Database {
         callback(this.productModel);
     }
     /**
-     * Initialise le modèle orderLine de la base de donnée mongoose pour l'envoie des requête sous la bonne forme
+     * Initialise le modèle orderLine de la base de donnée mongoose 
+     * pour l'envoie des requête sous la bonne forme
      * @method Database#modelInitOrderLine
      * @param {function} callback - Renvoi le modèle
      */
